@@ -6,4 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
             bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).show();
         }
     });
+
+    document.onkeyup = function (e) {
+        if (e.key === "Escape") {
+            bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).hide();
+        }
+    };
 });
