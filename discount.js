@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target.classList.contains('discount')) {
             e.preventDefault();
             document.getElementById('product').innerHTML = e.target.dataset['product'];
+            document.getElementById('discount-title').innerHTML = e.target.dataset['title'];
+            document.getElementById('discount-code').innerHTML = e.target.dataset['dcode'];
             bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).show();
         }
     });
